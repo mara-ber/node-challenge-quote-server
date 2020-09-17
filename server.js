@@ -18,6 +18,15 @@ app.get("/", function (request, response) {
 
 //START OF YOUR CODE...
 
+app.get("/quotes", function (req, res) {
+  res.send(quotes);
+});
+
+app.get("/quotes/random", function (req, res) {
+  let quote = pickFromArray(quotes)
+  res.send(quote);
+});
+
 //...END OF YOUR CODE
 
 //You can use this function to pick one element at random from a given array
