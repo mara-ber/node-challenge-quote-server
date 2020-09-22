@@ -23,7 +23,7 @@ app.get("/quotes", function (req, res) {
 });
 
 app.get("/quotes/random", function (req, res) {
-  let quote = pickFromArray(quotes)
+  let quote = pickFromArray(quotes);
   res.send(quote);
 });
 
@@ -37,7 +37,7 @@ function pickFromArray(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
 }
 
-//Start our server so that it listens for HTTP requests!
-const listener = app.listen(process.env.PORT, function () {
+//Start our server so that it listens for HTTP requests!  (process.env.PORT)
+const listener = app.listen(3000, function () {
   console.log("Your app is listening on port " + listener.address().port);
 });
